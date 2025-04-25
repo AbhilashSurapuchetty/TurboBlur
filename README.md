@@ -138,20 +138,6 @@ g++ -O3 -std=c++17 -fopenmp -mavx parallel_blur.cpp -o parallel_blur `pkg-config
 
 ---
 
-## ⚠️ Important Code Fix
-
-In the sequential_blur.cpp file, there's an issue with the image saving condition:
-
-```cpp
-// Change this line:
-if (numImages == 160) {
-    
-// To this:
-if (numImages == 1000) {  // Or any value that exists in datasetSizes
-```
-
-This fixes the issue where blurred images weren't being saved because 160 isn't in the datasetSizes array.
-
 ---
 
 ## 📈 Performance Results
