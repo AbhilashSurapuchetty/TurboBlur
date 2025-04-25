@@ -1,0 +1,31 @@
+# Ignore Python virtual environment
+myenv/
+
+# Ignore performance logs (they get generated every run)
+*.csv
+
+# Ignore C++ build files
+*.o
+*.out
+*.exe
+build/
+cmake-build-*/
+
+# Ignore compiled binaries
+parallel_blur
+sequential_blur
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore editor/IDE settings
+.vscode/
+.idea/
+
+# Optional: if you have any temporary or test files
+*.log
