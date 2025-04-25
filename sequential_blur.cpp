@@ -88,7 +88,7 @@ int main() {
 
             Mat blurred = applyGaussianBlur(image);
 
-            if (numImages == 160) {
+            if (numImages == 1000) {
                 string outPath = outputFolder + "Blur_Image" + to_string(i + 1) + ".jpg";
                 imwrite(outPath, blurred);
             }
