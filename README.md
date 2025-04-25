@@ -95,28 +95,7 @@ The parallel implementation uses:
 
 ## 🔧 How to Build
 
-### Using CMake (recommended)
-
-1. Create a CMakeLists.txt file:
-
-```cmake
-cmake_minimum_required(VERSION 3.10)
-project(GaussianBlurParallel)
-
-set(CMAKE_CXX_STANDARD 17)
-find_package(OpenCV REQUIRED)
-find_package(OpenMP REQUIRED)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -mavx")
-
-add_executable(sequential_blur sequential_blur.cpp)
-target_link_libraries(sequential_blur ${OpenCV_LIBS})
-
-add_executable(parallel_blur parallel_blur.cpp)
-target_link_libraries(parallel_blur ${OpenCV_LIBS} OpenMP::OpenMP_CXX)
-```
-
-2. Build the project:
+1. Build the project:
 ```bash
 mkdir build
 cd build
